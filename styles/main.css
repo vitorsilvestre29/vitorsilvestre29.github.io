@@ -177,6 +177,13 @@ section:last-of-type {
   border-bottom: none;
 }
 
+/* Anchor targets: offset scroll position so the sticky header never
+   covers a section heading when navigating via the menu. */
+section[id],
+.contact[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* ---------- header / nav ---------- */
 
 .site-header {
@@ -186,6 +193,11 @@ section:last-of-type {
   background: rgba(250, 249, 246, 0.92);
   backdrop-filter: saturate(140%) blur(6px);
   border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 2px 12px rgba(21, 19, 15, 0.06);
 }
 
 .header-inner {
@@ -202,6 +214,12 @@ section:last-of-type {
   text-decoration: none;
   color: var(--fg);
   letter-spacing: 0.02em;
+  transition: color 0.15s ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--accent);
 }
 
 .brand span {
@@ -215,6 +233,12 @@ section:last-of-type {
   padding: 0.45rem 0.6rem;
   min-width: 44px;
   min-height: 44px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  border-color: var(--accent);
 }
 
 .nav-toggle-bar,
@@ -226,7 +250,7 @@ section:last-of-type {
   height: 2px;
   background: var(--fg);
   position: relative;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-toggle-bar::before {
@@ -237,6 +261,23 @@ section:last-of-type {
 .nav-toggle-bar::after {
   position: absolute;
   top: 6px;
+}
+
+/* Hamburger morphs into an X when the mobile menu is open. */
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar {
+  background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::before {
+  top: 0;
+  transform: rotate(45deg);
+  background: var(--accent);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background: var(--accent);
 }
 
 .main-nav ul {
@@ -251,10 +292,12 @@ section:last-of-type {
   color: var(--fg-soft);
   padding: 0.3rem 0.1rem;
   border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .main-nav a:hover,
-.main-nav a:focus-visible {
+.main-nav a:focus-visible,
+.main-nav a.is-active {
   color: var(--fg);
   border-bottom-color: var(--accent);
 }
@@ -457,6 +500,11 @@ section:last-of-type {
   padding: 1.5rem clamp(1rem, 2.5vw, 1.75rem);
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.stat:hover {
+  background: var(--bg-alt);
 }
 
 .stat-num {
@@ -543,7 +591,14 @@ section:last-of-type {
   grid-template-columns: 12rem 1fr;
   gap: clamp(1rem, 3vw, 2.5rem);
   padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+  margin-inline: clamp(-0.75rem, -2vw, -1.25rem);
   border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.job:hover {
+  background: var(--bg-alt);
 }
 
 @media (max-width: 700px) {
@@ -614,6 +669,12 @@ section:last-of-type {
 .skill-card {
   background: var(--bg);
   padding: clamp(1.1rem, 2vw, 1.5rem);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skill-card:hover {
+  background: var(--bg-alt);
+  box-shadow: inset 3px 0 0 0 var(--accent);
 }
 
 .skill-card h3 {
@@ -637,6 +698,12 @@ section:last-of-type {
   border: 1px solid var(--border);
   padding: 0.28rem 0.55rem;
   color: var(--fg-soft);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.tag-list li:hover {
+  border-color: var(--accent);
+  color: var(--fg);
 }
 
 /* ---------- projects ---------- */
@@ -887,6 +954,12 @@ section:last-of-type {
 
 .product-card {
   border: 1px solid var(--border-strong);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(21, 19, 15, 0.1);
 }
 
 .product-shot {
@@ -901,6 +974,12 @@ section:last-of-type {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-shot img,
+.case-screenshot:hover img {
+  transform: scale(1.03);
 }
 
 /* Case study screenshots reuse .product-shot but sit outside a bordered
@@ -948,6 +1027,7 @@ section:last-of-type {
   display: inline-flex;
   align-items: center;
   color: var(--fg);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .link-chip:hover,
@@ -1074,6 +1154,7 @@ section:last-of-type {
   border-bottom: 1px solid var(--dark-border);
   text-decoration: none;
   color: var(--dark-fg);
+  transition: padding-left 0.15s ease, border-color 0.15s ease;
 }
 
 .contact-link .label {
@@ -1086,6 +1167,13 @@ section:last-of-type {
 
 .contact-link .value {
   font-size: 1.05rem;
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  padding-left: 0.6rem;
+  border-color: var(--accent);
 }
 
 .contact-link:hover .value,
