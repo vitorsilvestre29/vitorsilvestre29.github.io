@@ -983,10 +983,18 @@ section[id],
 }
 
 /* Case study screenshots reuse .product-shot but sit outside a bordered
-   card, so they need their own border and a 16:9 ratio instead of 16:10. */
+   card, so they need their own border. Unlike the product cards, these
+   dashboard screenshots are wider than 16:9 and must stay uncropped so
+   labels/axes on the edges stay legible — no forced aspect-ratio, and the
+   image sizes itself instead of being cover-cropped to fill a fixed box. */
 .case-screenshot {
   border: 1px solid var(--border);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: auto;
+}
+
+.case-screenshot img {
+  height: auto;
+  object-fit: contain;
 }
 
 .product-body {
