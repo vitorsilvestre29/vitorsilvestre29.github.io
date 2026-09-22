@@ -1,46 +1,31 @@
 (function () {
   "use strict";
 
-  // Mobile nav toggle
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.querySelector(".main-nav");
+  // Mobile nav toggle: opens/closes the menu and closes it again on link click.
+  var navToggle = document.querySelector(".nav-toggle");
+  var mainNav = document.querySelector(".main-nav");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = mainNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
-    nav.querySelectorAll("a").forEach(function (link) {
+    mainNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+        mainNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // Subtle reveal-on-scroll for sections (progressive enhancement only)
-  var revealEls = document.querySelectorAll(".reveal");
+  // GitHub stats card is loaded from a third-party image service; hide the
+  // block gracefully if it fails to load instead of leaving a broken image.
+  var githubStatsImg = document.querySelector(".github-signal-img");
 
-  if ("IntersectionObserver" in window && revealEls.length) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    revealEls.forEach(function (el) {
-      observer.observe(el);
-    });
-  } else {
-    revealEls.forEach(function (el) {
-      el.classList.add("is-visible");
+  if (githubStatsImg) {
+    githubStatsImg.addEventListener("error", function () {
+      githubStatsImg.style.display = "none";
     });
   }
 })();

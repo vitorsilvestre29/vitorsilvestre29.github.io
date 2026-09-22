@@ -116,7 +116,7 @@
       </div>
       <div class="github-signal">
         <div class="github-signal-label">
-          <span class="case-subhead" style="margin-bottom:0.4rem;">Atividade no GitHub</span>
+          <span class="case-subhead github-signal-heading">Atividade no GitHub</span>
           <a class="link-chip" href="https://github.com/vitorsilvestre29" target="_blank" rel="noopener">Ver perfil →</a>
         </div>
         <img
@@ -126,7 +126,6 @@
           width="480"
           height="195"
           loading="lazy"
-          onerror="this.style.display='none'"
         />
       </div>
     </div>
@@ -441,7 +440,7 @@
           </div>
 
           <p class="case-subhead">Screenshot</p>
-          <div class="product-shot" style="border:1px solid var(--border); aspect-ratio:16/9;">
+          <div class="product-shot case-screenshot">
             <img src="assets/govtrack-dashboard.png" alt="Dashboard do GovTrack BR no Apache Superset mostrando indicadores da Câmara dos Deputados" loading="lazy" width="1200" height="675" />
           </div>
 
@@ -513,12 +512,12 @@
               <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                 <defs>
                   <marker id="bcb-arrow-1" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M0,0 L10,0 L5,10 Z" fill="#85806f" />
+                    <path d="M0,0 L10,0 L5,10 Z" class="diagram-arrowhead" />
                   </marker>
                 </defs>
-                <line x1="16.6" y1="0" x2="16.6" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
-                <line x1="50" y1="0" x2="50" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
-                <line x1="83.3" y1="0" x2="83.3" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
+                <line x1="16.6" y1="0" x2="16.6" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-1)" />
+                <line x1="50" y1="0" x2="50" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-1)" />
+                <line x1="83.3" y1="0" x2="83.3" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-1)" />
               </svg>
 
               <p class="fanin-row-label">Silver — limpeza &amp; validação (Data Quality)</p>
@@ -531,12 +530,12 @@
               <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                 <defs>
                   <marker id="bcb-arrow-2" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M0,0 L10,0 L5,10 Z" fill="#85806f" />
+                    <path d="M0,0 L10,0 L5,10 Z" class="diagram-arrowhead" />
                   </marker>
                 </defs>
-                <line x1="16.6" y1="0" x2="16.6" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
-                <line x1="50" y1="0" x2="50" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
-                <line x1="83.3" y1="0" x2="83.3" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
+                <line x1="16.6" y1="0" x2="16.6" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-2)" />
+                <line x1="50" y1="0" x2="50" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-2)" />
+                <line x1="83.3" y1="0" x2="83.3" y2="42" class="diagram-connector" marker-end="url(#bcb-arrow-2)" />
               </svg>
 
               <p class="fanin-row-label">Gold — agregação mensal (média / mínima / máxima / contagem)</p>
@@ -549,12 +548,12 @@
               <svg class="fanin-connector" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                 <defs>
                   <marker id="bcb-arrow-accent" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M0,0 L10,0 L5,10 Z" fill="#c1490c" />
+                    <path d="M0,0 L10,0 L5,10 Z" class="diagram-arrowhead diagram-arrowhead--accent" />
                   </marker>
                 </defs>
-                <line x1="16.6" y1="0" x2="49" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
-                <line x1="50" y1="0" x2="50" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
-                <line x1="83.3" y1="0" x2="51" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
+                <line x1="16.6" y1="0" x2="49" y2="52" class="diagram-connector diagram-connector--accent" marker-end="url(#bcb-arrow-accent)" />
+                <line x1="50" y1="0" x2="50" y2="52" class="diagram-connector diagram-connector--accent" marker-end="url(#bcb-arrow-accent)" />
+                <line x1="83.3" y1="0" x2="51" y2="52" class="diagram-connector diagram-connector--accent" marker-end="url(#bcb-arrow-accent)" />
               </svg>
 
               <p class="fanin-row-label">Consolidação — 1 tarefa final</p>
@@ -568,7 +567,7 @@
           </div>
 
           <p class="case-subhead">Screenshot</p>
-          <div class="product-shot" style="border:1px solid var(--border); aspect-ratio:16/9;">
+          <div class="product-shot case-screenshot">
             <img src="assets/bcb-dashboard.png" alt="Dashboard de indicadores econômicos publicado no Databricks mostrando Selic, IPCA e dólar" loading="lazy" width="1200" height="675" />
           </div>
 
@@ -581,7 +580,7 @@
               <li>Tarefa final de consolidação une as três tabelas Gold em <span class="mono">gold_indicadores_economicos_mensal</span>.</li>
               <li>Orquestração documentada via <span class="mono">job_definition.json</span> no repositório, com custo zero em compute serverless da Free Edition.</li>
             </ul>
-            <p class="case-subhead" style="margin-top:1.5rem;">Stack completa</p>
+            <p class="case-subhead case-subhead--spaced">Stack completa</p>
             <ul>
               <li>Azure Databricks, PySpark, SQL, Delta Lake.</li>
               <li>Databricks Workflows para orquestração do job de 10 tarefas.</li>

@@ -492,6 +492,10 @@ section:last-of-type {
   min-width: 180px;
 }
 
+.github-signal-heading {
+  margin-bottom: 0.4rem;
+}
+
 .github-signal-img {
   max-width: 100%;
   width: 480px;
@@ -732,6 +736,10 @@ section:last-of-type {
   margin-bottom: 0.9rem;
 }
 
+.case-subhead--spaced {
+  margin-top: 1.5rem;
+}
+
 .case-outcomes {
   margin-top: 1.75rem;
 }
@@ -815,6 +823,14 @@ section:last-of-type {
   fill: var(--fg-faint);
 }
 
+.diagram-connector--accent {
+  stroke: var(--accent);
+}
+
+.diagram-arrowhead--accent {
+  fill: var(--accent);
+}
+
 .diagram-fanin {
   min-width: 700px;
 }
@@ -885,6 +901,13 @@ section:last-of-type {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+/* Case study screenshots reuse .product-shot but sit outside a bordered
+   card, so they need their own border and a 16:9 ratio instead of 16:10. */
+.case-screenshot {
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
 }
 
 .product-body {
@@ -1085,24 +1108,4 @@ section:last-of-type {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-
-/* ---------- utility: reveal on scroll (subtle) ---------- */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
 }
