@@ -41,6 +41,33 @@
     window.addEventListener("scroll", updateHeaderShadow, { passive: true });
   }
 
+  // mailto: links do nothing visible when the visitor has no default mail
+  // client configured (common on Windows without Outlook/Mail set up), so
+  // clicking one can look broken even though the link itself is correct.
+  // Copy the address to the clipboard as a fallback and confirm it inline,
+  // without blocking the normal mailto navigation.
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    if (!navigator.clipboard) return;
+
+    var email = link.getAttribute("href").replace("mailto:", "").split("?")[0];
+    var textTarget = link.querySelector(".value") || link;
+    var originalText = textTarget.textContent;
+    var resetTimer = null;
+
+    link.addEventListener("click", function () {
+      navigator.clipboard
+        .writeText(email)
+        .then(function () {
+          clearTimeout(resetTimer);
+          textTarget.textContent = "E-mail copiado";
+          resetTimer = setTimeout(function () {
+            textTarget.textContent = originalText;
+          }, 2000);
+        })
+        .catch(function () {});
+    });
+  });
+
   // Highlight the nav link for the section currently in view.
   var navLinks = Array.prototype.slice.call(
     document.querySelectorAll(".main-nav a[href^='#']")
