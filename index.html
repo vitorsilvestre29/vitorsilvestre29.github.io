@@ -3,9 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vitor Silvestre — Engenheiro de Dados</title>
+<title>Vitor Silvestre — Engenheiro de Dados | Pipelines ETL/ELT, Airflow, ClickHouse</title>
 <meta name="description" content="Vitor Silvestre, Engenheiro de Dados. Pipelines ETL/ELT, Airflow, ClickHouse, arquitetura Medallion e Data Lakehouse. Portfólio e currículo." />
 <meta name="color-scheme" content="light" />
+<link rel="canonical" href="https://vitorsilvestre29.github.io" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vitorsilvestre29.github.io" />
+<meta property="og:title" content="Vitor Silvestre — Engenheiro de Dados" />
+<meta property="og:description" content="Pipelines ETL/ELT, Airflow, ClickHouse, arquitetura Medallion e Data Lakehouse aplicados a problemas reais. Portfólio e currículo." />
+<meta property="og:image" content="https://vitorsilvestre29.github.io/assets/vitor-silvestre.png" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vitor Silvestre — Engenheiro de Dados" />
+<meta name="twitter:description" content="Pipelines ETL/ELT, Airflow, ClickHouse, arquitetura Medallion e Data Lakehouse aplicados a problemas reais. Portfólio e currículo." />
+<meta name="twitter:image" content="https://vitorsilvestre29.github.io/assets/vitor-silvestre.png" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet" />
@@ -72,26 +90,42 @@
     </div>
   </section>
 
-  <!-- ============ STATS STRIP ============ -->
-  <section class="stats" aria-label="Resumo rápido">
+  <!-- ============ METRICS BLOCK ============ -->
+  <section class="stats" aria-label="Impacto em números">
     <div class="wrap">
+      <span class="section-kicker stats-kicker">Impacto em números</span>
       <div class="stats-grid">
         <div class="stat">
-          <span class="stat-num mono">Airflow / ClickHouse</span>
-          <span class="stat-label">Foco atual em produção</span>
+          <span class="stat-num mono">8h → 4h</span>
+          <span class="stat-label">Redução no tempo de processamento com migração Bash → Python</span>
         </div>
         <div class="stat">
-          <span class="stat-num mono">8h → 4h</span>
-          <span class="stat-label">Redução de processamento com migração Bash → Python</span>
+          <span class="stat-num mono">10%</span>
+          <span class="stat-label">Redução de perdas em produtos fabricados internamente</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono">8 regiões</span>
+          <span class="stat-label">Execução paralela de DAGs em produção</span>
         </div>
         <div class="stat">
           <span class="stat-num mono">3+ anos</span>
-          <span class="stat-label">Trabalhando com dados e análise</span>
+          <span class="stat-label">Atuação com dados, análise e engenharia</span>
         </div>
-        <div class="stat">
-          <span class="stat-num mono">SP, Brasil</span>
-          <span class="stat-label">Remoto ou híbrido</span>
+      </div>
+      <div class="github-signal">
+        <div class="github-signal-label">
+          <span class="case-subhead" style="margin-bottom:0.4rem;">Atividade no GitHub</span>
+          <a class="link-chip" href="https://github.com/vitorsilvestre29" target="_blank" rel="noopener">Ver perfil →</a>
         </div>
+        <img
+          class="github-signal-img"
+          src="https://github-readme-stats.vercel.app/api?username=vitorsilvestre29&show_icons=true&hide_border=true&bg_color=00000000&title_color=c1490c&text_color=4a463d&icon_color=c1490c&hide_title=true"
+          alt="Estatísticas de contribuições públicas de Vitor Silvestre no GitHub"
+          width="480"
+          height="195"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
       </div>
     </div>
   </section>
@@ -299,6 +333,8 @@
         <span class="section-line" aria-hidden="true"></span>
       </div>
 
+      <p class="section-kicker projects-group-label">Estudos de caso — Engenharia de dados</p>
+
       <!-- ---- Case study 1: GovTrack BR ---- -->
       <article class="case-study">
         <header class="case-head">
@@ -344,37 +380,56 @@
 
           <p class="case-subhead">Fluxo de dados</p>
           <div class="diagram">
-            <div class="diagram-flow">
-              <div class="diagram-box">
-                <span class="box-label">Ingestão</span>
-                <span class="box-title">APIs públicas<br />Câmara + Transparência</span>
-              </div>
-              <div class="diagram-arrow" aria-hidden="true">→</div>
-              <div class="diagram-box">
-                <span class="box-label">Streaming</span>
-                <span class="box-title">Apache Kafka</span>
-              </div>
-              <div class="diagram-arrow" aria-hidden="true">→</div>
-              <div class="diagram-box">
-                <span class="box-label">Bronze</span>
-                <span class="box-title">Dados brutos<br />(Parquet)</span>
-              </div>
-              <div class="diagram-arrow" aria-hidden="true">→</div>
-              <div class="diagram-box">
-                <span class="box-label">Silver</span>
-                <span class="box-title">Limpeza &amp; testes<br />(dbt)</span>
-              </div>
-              <div class="diagram-arrow" aria-hidden="true">→</div>
-              <div class="diagram-box">
-                <span class="box-label">Gold</span>
-                <span class="box-title">Modelos analíticos<br />(dbt)</span>
-              </div>
-              <div class="diagram-arrow" aria-hidden="true">→</div>
-              <div class="diagram-box">
-                <span class="box-label">Consumo</span>
-                <span class="box-title">Dashboards<br />(Superset)</span>
-              </div>
-            </div>
+            <svg class="pipeline-svg" viewBox="0 0 1420 170" width="1420" height="170" role="img" aria-label="Fluxo de dados: Ingestão via APIs públicas, Streaming em Kafka, camada Bronze, camada Silver, camada Gold, Consumo em dashboards Superset">
+              <defs>
+                <marker id="govtrack-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 Z" class="diagram-arrowhead" />
+                </marker>
+              </defs>
+
+              <line x1="200" y1="80" x2="248" y2="80" class="diagram-connector" marker-end="url(#govtrack-arrow)" />
+              <line x1="440" y1="80" x2="488" y2="80" class="diagram-connector" marker-end="url(#govtrack-arrow)" />
+              <line x1="680" y1="80" x2="728" y2="80" class="diagram-connector" marker-end="url(#govtrack-arrow)" />
+              <line x1="920" y1="80" x2="968" y2="80" class="diagram-connector" marker-end="url(#govtrack-arrow)" />
+              <line x1="1160" y1="80" x2="1208" y2="80" class="diagram-connector" marker-end="url(#govtrack-arrow)" />
+
+              <foreignObject x="10" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Ingestão</span>
+                  <span class="box-title">APIs públicas<br />Câmara + Transparência</span>
+                </div>
+              </foreignObject>
+              <foreignObject x="250" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Streaming</span>
+                  <span class="box-title">Apache Kafka</span>
+                </div>
+              </foreignObject>
+              <foreignObject x="490" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Bronze</span>
+                  <span class="box-title">Dados brutos<br />(Parquet)</span>
+                </div>
+              </foreignObject>
+              <foreignObject x="730" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Silver</span>
+                  <span class="box-title">Limpeza &amp; testes<br />(dbt)</span>
+                </div>
+              </foreignObject>
+              <foreignObject x="970" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Gold</span>
+                  <span class="box-title">Modelos analíticos<br />(dbt)</span>
+                </div>
+              </foreignObject>
+              <foreignObject x="1210" y="20" width="190" height="120">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="diagram-box diagram-box--svg">
+                  <span class="box-label">Consumo</span>
+                  <span class="box-title">Dashboards<br />(Superset)</span>
+                </div>
+              </foreignObject>
+            </svg>
           </div>
 
           <p class="case-subhead">Screenshot</p>
@@ -448,9 +503,14 @@
               </div>
 
               <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <line x1="16.6" y1="0" x2="16.6" y2="48" stroke="#85806f" stroke-width="1.5" />
-                <line x1="50" y1="0" x2="50" y2="48" stroke="#85806f" stroke-width="1.5" />
-                <line x1="83.3" y1="0" x2="83.3" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <defs>
+                  <marker id="bcb-arrow-1" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0,0 L10,0 L5,10 Z" fill="#85806f" />
+                  </marker>
+                </defs>
+                <line x1="16.6" y1="0" x2="16.6" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
+                <line x1="50" y1="0" x2="50" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
+                <line x1="83.3" y1="0" x2="83.3" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-1)" />
               </svg>
 
               <p class="fanin-row-label">Silver — limpeza &amp; validação (Data Quality)</p>
@@ -461,9 +521,14 @@
               </div>
 
               <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <line x1="16.6" y1="0" x2="16.6" y2="48" stroke="#85806f" stroke-width="1.5" />
-                <line x1="50" y1="0" x2="50" y2="48" stroke="#85806f" stroke-width="1.5" />
-                <line x1="83.3" y1="0" x2="83.3" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <defs>
+                  <marker id="bcb-arrow-2" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0,0 L10,0 L5,10 Z" fill="#85806f" />
+                  </marker>
+                </defs>
+                <line x1="16.6" y1="0" x2="16.6" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
+                <line x1="50" y1="0" x2="50" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
+                <line x1="83.3" y1="0" x2="83.3" y2="42" stroke="#85806f" stroke-width="1.5" marker-end="url(#bcb-arrow-2)" />
               </svg>
 
               <p class="fanin-row-label">Gold — agregação mensal (média / mínima / máxima / contagem)</p>
@@ -474,9 +539,14 @@
               </div>
 
               <svg class="fanin-connector" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <line x1="16.6" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
-                <line x1="50" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
-                <line x1="83.3" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
+                <defs>
+                  <marker id="bcb-arrow-accent" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0,0 L10,0 L5,10 Z" fill="#c1490c" />
+                  </marker>
+                </defs>
+                <line x1="16.6" y1="0" x2="49" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
+                <line x1="50" y1="0" x2="50" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
+                <line x1="83.3" y1="0" x2="51" y2="52" stroke="#c1490c" stroke-width="1.5" marker-end="url(#bcb-arrow-accent)" />
               </svg>
 
               <p class="fanin-row-label">Consolidação — 1 tarefa final</p>
@@ -514,7 +584,7 @@
       </article>
 
       <!-- ---- Produtos em produção ---- -->
-      <p class="section-kicker" style="margin-top:3rem;">Produtos em produção</p>
+      <p class="section-kicker projects-group-label projects-group-label--products">Produtos em produção</p>
       <div class="products-grid">
         <article class="product-card">
           <div class="product-shot">
