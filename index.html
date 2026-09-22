@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vitor Silvestre — Engenheiro de Dados</title>
+<meta name="description" content="Vitor Silvestre, Engenheiro de Dados. Pipelines ETL/ELT, Airflow, ClickHouse, arquitetura Medallion e Data Lakehouse. Portfólio e currículo." />
+<meta name="color-scheme" content="light" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo">vitor<span>@</span>dados</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="topo" aria-label="Apresentação">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="hero-eyebrow">Disponível para oportunidades remotas ou híbridas</span>
+          <h1>Vitor Silvestre</h1>
+          <p class="hero-role">Engenheiro de Dados</p>
+          <p class="hero-lede">
+            Construo pipelines de dados que não quebram silenciosamente. Do
+            ETL em produção ao Data Lakehouse — Airflow, ClickHouse, Spark e
+            arquitetura Medallion aplicados a problemas reais, com
+            monitoramento e Data Quality desde a primeira linha.
+          </p>
+          <ul class="hero-meta">
+            <li>Olímpia/SP · remoto ou híbrido</li>
+            <li>Disponível para novas oportunidades</li>
+            <li>Pós-graduação em Eng. de Dados &amp; IA (2026–2027)</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:vitorcesarsilvestre2017@gmail.com">E-mail</a>
+            <a class="btn" href="https://linkedin.com/in/vitor-silvestre21" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/vitorsilvestre29" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="assets/curriculo-vitor-silvestre.pdf" download>Baixar currículo (PDF)</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <img src="assets/vitor-silvestre.png" alt="Retrato de Vitor Silvestre" width="480" height="600" />
+          </div>
+          <p class="hero-photo-caption">Vitor Silvestre — Olímpia/SP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS STRIP ============ -->
+  <section class="stats" aria-label="Resumo rápido">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-num mono">Airflow / ClickHouse</span>
+          <span class="stat-label">Foco atual em produção</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono">8h → 4h</span>
+          <span class="stat-label">Redução de processamento com migração Bash → Python</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono">3+ anos</span>
+          <span class="stat-label">Trabalhando com dados e análise</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono">SP, Brasil</span>
+          <span class="stat-label">Remoto ou híbrido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre" aria-labelledby="sobre-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2 id="sobre-titulo">Sobre mim</h2>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead">
+          Comecei mexendo com planilhas e dashboards para resolver problemas
+          concretos de perda e estoque — hoje construo os pipelines que
+          alimentam esses dashboards.
+        </p>
+        <div class="about-body">
+          <p>
+            Minha entrada em dados foi pela análise aplicada: em um
+            supermercado de médio porte, usei Power BI e Python para mapear
+            padrões de perda e contribuí para reduzir em 10% os prejuízos com
+            produtos fabricados internamente. Isso me mostrou que o valor de
+            um dado está na confiabilidade do processo que o gera — e foi o
+            que me levou para engenharia de dados.
+          </p>
+          <p>
+            Na R2DA Tecnologia, sustentei pipelines ETL/ELT que integravam
+            Oracle, APIs e sistemas de mensageria, orquestrados em Apache
+            Airflow. Migrei cargas críticas de Bash para Python, cortando o
+            tempo de processamento pela metade e eliminando falhas que antes
+            passavam despercebidas. Modelei tabelas analíticas em ClickHouse
+            com estratégias de versionamento e soft delete, e tratei Data
+            Quality como parte do pipeline, não como etapa opcional.
+          </p>
+          <p>
+            Fora do trabalho, mantenho dois projetos pessoais de Data
+            Lakehouse (GovTrack BR e Indicadores Econômicos do Banco
+            Central) para aprofundar arquitetura Medallion, streaming e
+            orquestração — e dois produtos em produção que aplicam IA
+            generativa a problemas jurídicos reais. Estou cursando
+            pós-graduação em Engenharia de Dados e Inteligência Artificial,
+            com foco em Databricks, Spark e governança em nuvem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIÊNCIA ============ -->
+  <section id="experiencia" aria-labelledby="experiencia-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2 id="experiencia-titulo">Experiência profissional</h2>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="timeline">
+        <article class="job">
+          <div class="job-meta">
+            <span class="job-period">jun 2025 — mai 2026</span>
+            Remoto · SP
+          </div>
+          <div>
+            <h3 class="job-title">Engenheiro de Dados</h3>
+            <span class="job-org">R2DA Tecnologia</span>
+            <ul>
+              <li>Construção e sustentação de pipelines ETL/ELT para dados de Oracle, APIs e sistemas de mensageria.</li>
+              <li>Migração de cargas em Bash para Python com orquestração no Apache Airflow, reduzindo o processamento de 8h para 4h e eliminando falhas silenciosas.</li>
+              <li>Criação e monitoramento de DAGs com execução paralela em oito regiões, retries, tolerância a falhas e reprocessamento automático.</li>
+              <li>Modelagem de tabelas analíticas no ClickHouse com ReplacingMergeTree, versionamento, soft delete, Materialized Views e views para dashboards.</li>
+              <li>Rotinas de Data Quality em Python para validação de nulos, inconsistências e anomalias de data antes da carga.</li>
+              <li>Troubleshooting por análise de logs e causa-raiz; Query Tuning em SQL/Python; integração Oracle–ClickHouse.</li>
+              <li>Git Flow, Pull Requests, Code Review, documentação de pipelines e linhagem de dados.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-meta">
+            <span class="job-period">nov 2022 — dez 2025</span>
+            Olímpia/SP
+          </div>
+          <div>
+            <h3 class="job-title">Analista de Dados e Prevenção de Perdas</h3>
+            <span class="job-org">Supermercado Iquegami</span>
+            <ul>
+              <li>Dashboard em Power BI para acompanhamento de perdas e KPIs por setor, com atualização semanal automatizada.</li>
+              <li>Análise de padrões com Python e Excel que contribuiu para reduzir em 10% os prejuízos de produtos fabricados pela empresa.</li>
+              <li>Relatórios executivos semanais para a gestão; automação da coleta e tratamento dos dados.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job is-compact">
+          <div class="job-meta">
+            <span class="job-period">jul 2019 — jul 2022</span>
+            Grande SP
+          </div>
+          <div>
+            <h3 class="job-title">Suporte Técnico e Análise de E-commerce</h3>
+            <span class="job-org">—</span>
+            <ul>
+              <li>Monitoramento de indicadores de e-commerce e elaboração de relatórios para a gestão de vendas.</li>
+              <li>Suporte a sistemas internos e manutenção de hardware.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job is-compact">
+          <div class="job-meta">
+            <span class="job-period">jul 2020 — jan 2022</span>
+            Meio período
+          </div>
+          <div>
+            <h3 class="job-title">Estagiário</h3>
+            <span class="job-org">Seven IT</span>
+            <ul>
+              <li>Rotinas de controladoria e suporte técnico.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" aria-labelledby="stack-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-index">03</span>
+        <h2 id="stack-titulo">Competências &amp; stack técnica</h2>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Engenharia de dados</h3>
+          <ul class="tag-list">
+            <li>Apache Airflow</li><li>ETL / ELT</li><li>Apache Kafka</li><li>Streaming</li>
+            <li>dbt</li><li>Ingestão de dados</li><li>Data Quality</li><li>Monitoramento</li>
+            <li>Troubleshooting</li><li>Web Scraping</li><li>Integração de APIs</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Linguagens</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>Pandas</li><li>NumPy</li><li>PyArrow</li><li>Scikit-Learn</li>
+            <li>SQL avançado</li><li>CTEs</li><li>Window Functions</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Bancos de dados</h3>
+          <ul class="tag-list">
+            <li>ClickHouse (OLAP)</li><li>PostgreSQL</li><li>Oracle</li><li>SQL Server</li>
+            <li>ReplacingMergeTree</li><li>Materialized Views</li><li>DDL</li><li>Query Tuning</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Arquitetura</h3>
+          <ul class="tag-list">
+            <li>Data Lakehouse</li><li>Medallion (Bronze/Silver/Gold)</li><li>Modelagem dimensional</li>
+            <li>OLAP</li><li>Governança</li><li>Linhagem de dados</li><li>Parquet</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud &amp; plataformas</h3>
+          <ul class="tag-list">
+            <li>Azure Databricks</li><li>Delta Lake</li><li>Unity Catalog</li>
+            <li>AWS (pós-graduação)</li><li>GCP (pós-graduação)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>BI &amp; visualização</h3>
+          <ul class="tag-list">
+            <li>Power BI</li><li>DAX</li><li>Apache Superset</li><li>Excel avançado</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps &amp; colaboração</h3>
+          <ul class="tag-list">
+            <li>Git</li><li>GitHub</li><li>Git Flow</li><li>GitHub Actions</li>
+            <li>Docker</li><li>CI/CD</li><li>PR / Code Review</li><li>Scrum / Kanban</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>IA aplicada</h3>
+          <ul class="tag-list">
+            <li>Anthropic Claude API</li><li>LLMs</li><li>FastAPI</li>
+            <li>SQLAlchemy Async</li><li>OCR (Tesseract)</li><li>React / TypeScript</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS ============ -->
+  <section id="projetos" aria-labelledby="projetos-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-index">04</span>
+        <h2 id="projetos-titulo">Projetos</h2>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <!-- ---- Case study 1: GovTrack BR ---- -->
+      <article class="case-study">
+        <header class="case-head">
+          <div class="case-head-left">
+            <span class="section-kicker">Estudo de caso · Data Lakehouse</span>
+            <h3>GovTrack BR</h3>
+          </div>
+          <div class="case-links">
+            <a class="link-chip" href="https://github.com/vitorsilvestre29/govtrack-br" target="_blank" rel="noopener">Repositório →</a>
+          </div>
+        </header>
+        <div class="case-body">
+          <p class="case-summary">
+            Pipeline de Data Lakehouse que ingere dados públicos da Câmara
+            dos Deputados e do Portal da Transparência, processa em camadas
+            Bronze/Silver/Gold e disponibiliza para análise em Superset —
+            construído para praticar streaming, testes de dados e
+            orquestração fora do ambiente corporativo.
+          </p>
+
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <span class="label">Fontes</span>
+              <span class="value">Câmara dos Deputados · Portal da Transparência</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Orquestração</span>
+              <span class="value">Apache Airflow</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Streaming</span>
+              <span class="value">Apache Kafka</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Transformação</span>
+              <span class="value">dbt (testes + modelagem)</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Visualização</span>
+              <span class="value">Apache Superset</span>
+            </div>
+          </div>
+
+          <p class="case-subhead">Fluxo de dados</p>
+          <div class="diagram">
+            <div class="diagram-flow">
+              <div class="diagram-box">
+                <span class="box-label">Ingestão</span>
+                <span class="box-title">APIs públicas<br />Câmara + Transparência</span>
+              </div>
+              <div class="diagram-arrow" aria-hidden="true">→</div>
+              <div class="diagram-box">
+                <span class="box-label">Streaming</span>
+                <span class="box-title">Apache Kafka</span>
+              </div>
+              <div class="diagram-arrow" aria-hidden="true">→</div>
+              <div class="diagram-box">
+                <span class="box-label">Bronze</span>
+                <span class="box-title">Dados brutos<br />(Parquet)</span>
+              </div>
+              <div class="diagram-arrow" aria-hidden="true">→</div>
+              <div class="diagram-box">
+                <span class="box-label">Silver</span>
+                <span class="box-title">Limpeza &amp; testes<br />(dbt)</span>
+              </div>
+              <div class="diagram-arrow" aria-hidden="true">→</div>
+              <div class="diagram-box">
+                <span class="box-label">Gold</span>
+                <span class="box-title">Modelos analíticos<br />(dbt)</span>
+              </div>
+              <div class="diagram-arrow" aria-hidden="true">→</div>
+              <div class="diagram-box">
+                <span class="box-label">Consumo</span>
+                <span class="box-title">Dashboards<br />(Superset)</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="case-subhead">Screenshot</p>
+          <div class="product-shot" style="border:1px solid var(--border); aspect-ratio:16/9;">
+            <img src="assets/govtrack-dashboard.png" alt="Dashboard do GovTrack BR no Apache Superset mostrando indicadores da Câmara dos Deputados" loading="lazy" width="1200" height="675" />
+          </div>
+
+          <div class="case-outcomes">
+            <p class="case-subhead">Stack completa</p>
+            <ul>
+              <li>Python, Apache Airflow, Apache Kafka para ingestão e orquestração.</li>
+              <li>PostgreSQL como data warehouse, dbt para transformação e testes de qualidade.</li>
+              <li>Apache Superset para exploração e dashboards.</li>
+              <li>Docker para ambiente reprodutível, PyArrow para manipulação em Parquet, GitHub Actions para CI.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---- Case study 2: BCB ---- -->
+      <article class="case-study">
+        <header class="case-head">
+          <div class="case-head-left">
+            <span class="section-kicker">Estudo de caso · Pipeline analítico serverless</span>
+            <h3>Indicadores Econômicos — BCB</h3>
+          </div>
+          <div class="case-links">
+            <a class="link-chip" href="https://github.com/vitorsilvestre29/monitor-economico-brasil-bcb" target="_blank" rel="noopener">Repositório →</a>
+            <a class="link-chip" href="https://dbc-4b3ad47f-d3dc.cloud.databricks.com/dashboardsv3/01f1b5de47b21cafb709a6bb9da30eac/published?o=7474655819950054" target="_blank" rel="noopener">Dashboard publicado →</a>
+          </div>
+        </header>
+        <div class="case-body">
+          <p class="case-summary">
+            Pipeline analítico que consome Selic, IPCA e dólar diretamente da
+            API do Banco Central (SGS) e os consolida em uma tabela mensal
+            única, orquestrado por um job de 10 tarefas no Databricks
+            Workflows, rodando diariamente em compute serverless gratuito.
+          </p>
+
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <span class="label">Fonte</span>
+              <span class="value">API SGS do Banco Central</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Job</span>
+              <span class="value mono">monitor_economico_bcb</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Execução</span>
+              <span class="value">Diária, 05:00 America/São_Paulo</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Compute</span>
+              <span class="value">Databricks Free Edition · Serverless</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="label">Alertas</span>
+              <span class="value">E-mail em caso de falha</span>
+            </div>
+          </div>
+
+          <p class="case-subhead">Fluxo de dados — fan-out / fan-in (10 tarefas)</p>
+          <div class="diagram">
+            <div class="diagram-fanin">
+              <p class="fanin-row-label">Bronze — ingestão paralela</p>
+              <div class="fanin-row">
+                <div class="diagram-box"><span class="box-label">Bronze</span><span class="box-title">Dólar</span></div>
+                <div class="diagram-box"><span class="box-label">Bronze</span><span class="box-title">IPCA</span></div>
+                <div class="diagram-box"><span class="box-label">Bronze</span><span class="box-title">Selic</span></div>
+              </div>
+
+              <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <line x1="16.6" y1="0" x2="16.6" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <line x1="50" y1="0" x2="50" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <line x1="83.3" y1="0" x2="83.3" y2="48" stroke="#85806f" stroke-width="1.5" />
+              </svg>
+
+              <p class="fanin-row-label">Silver — limpeza &amp; validação (Data Quality)</p>
+              <div class="fanin-row">
+                <div class="diagram-box"><span class="box-label">Silver</span><span class="box-title">Dólar</span></div>
+                <div class="diagram-box"><span class="box-label">Silver</span><span class="box-title">IPCA</span></div>
+                <div class="diagram-box"><span class="box-label">Silver</span><span class="box-title">Selic</span></div>
+              </div>
+
+              <svg class="fanin-connector" viewBox="0 0 300 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <line x1="16.6" y1="0" x2="16.6" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <line x1="50" y1="0" x2="50" y2="48" stroke="#85806f" stroke-width="1.5" />
+                <line x1="83.3" y1="0" x2="83.3" y2="48" stroke="#85806f" stroke-width="1.5" />
+              </svg>
+
+              <p class="fanin-row-label">Gold — agregação mensal (média / mínima / máxima / contagem)</p>
+              <div class="fanin-row">
+                <div class="diagram-box"><span class="box-label">Gold</span><span class="box-title">Dólar</span></div>
+                <div class="diagram-box"><span class="box-label">Gold</span><span class="box-title">IPCA</span></div>
+                <div class="diagram-box"><span class="box-label">Gold</span><span class="box-title">Selic</span></div>
+              </div>
+
+              <svg class="fanin-connector" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <line x1="16.6" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
+                <line x1="50" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
+                <line x1="83.3" y1="0" x2="50" y2="60" stroke="#c1490c" stroke-width="1.5" />
+              </svg>
+
+              <p class="fanin-row-label">Consolidação — 1 tarefa final</p>
+              <div class="fanin-final">
+                <div class="diagram-box">
+                  <span class="box-label">Gold consolidado</span>
+                  <span class="box-title mono">gold_indicadores_economicos_mensal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="case-subhead">Screenshot</p>
+          <div class="product-shot" style="border:1px solid var(--border); aspect-ratio:16/9;">
+            <img src="assets/bcb-dashboard.png" alt="Dashboard de indicadores econômicos publicado no Databricks mostrando Selic, IPCA e dólar" loading="lazy" width="1200" height="675" />
+          </div>
+
+          <div class="case-outcomes">
+            <p class="case-subhead">Detalhes técnicos</p>
+            <ul>
+              <li>Três tarefas Bronze rodam em paralelo (dólar, IPCA, Selic), cada uma consumindo sua respectiva série da API SGS do Bacen.</li>
+              <li>Camada Silver aplica limpeza e validação; checagens de Data Quality interrompem a task e disparam alerta em caso de inconsistência.</li>
+              <li>Camada Gold agrega cada série em base mensal (média, mínima, máxima e contagem de observações).</li>
+              <li>Tarefa final de consolidação une as três tabelas Gold em <span class="mono">gold_indicadores_economicos_mensal</span>.</li>
+              <li>Orquestração documentada via <span class="mono">job_definition.json</span> no repositório, com custo zero em compute serverless da Free Edition.</li>
+            </ul>
+            <p class="case-subhead" style="margin-top:1.5rem;">Stack completa</p>
+            <ul>
+              <li>Azure Databricks, PySpark, SQL, Delta Lake.</li>
+              <li>Databricks Workflows para orquestração do job de 10 tarefas.</li>
+              <li>Arquitetura Medallion (Bronze/Silver/Gold).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---- Produtos em produção ---- -->
+      <p class="section-kicker" style="margin-top:3rem;">Produtos em produção</p>
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-shot">
+            <img src="assets/peticiona-plus-home.jpg" alt="Tela inicial do Peticiona+, SaaS jurídico para geração assistida de documentos" loading="lazy" width="960" height="600" />
+          </div>
+          <div class="product-body">
+            <h3>Peticiona+</h3>
+            <p>
+              SaaS jurídico em produção para geração assistida de documentos,
+              com gestão de clientes, processos, prazos e equipe. Conta com
+              57 agentes especializados cobrindo 10 áreas do Direito.
+            </p>
+            <p class="product-stack">Next.js · React · TypeScript · IA generativa · arquitetura SaaS</p>
+            <div class="product-links">
+              <a class="link-chip" href="https://peticiona.cloud/" target="_blank" rel="noopener">Acessar produto →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-shot">
+            <img src="assets/laudo-juros-home.jpg" alt="Tela inicial do Laudo Juros, plataforma para análise de juros abusivos em contratos" loading="lazy" width="960" height="600" />
+          </div>
+          <div class="product-body">
+            <h3>Laudo Juros</h3>
+            <p>
+              Plataforma que extrai dados de contratos via OCR, compara
+              taxas praticadas com as séries oficiais do Banco Central (SGS)
+              e gera laudos técnicos sobre juros abusivos, com pagamento e
+              entrega do relatório em PDF/DOCX.
+            </p>
+            <p class="product-stack">Python · FastAPI · Claude API · Bacen SGS · Tesseract OCR · PostgreSQL · MercadoPago</p>
+            <div class="product-links">
+              <a class="link-chip" href="https://www.laudojuros.com.br/" target="_blank" rel="noopener">Acessar produto →</a>
+              <a class="link-chip" href="https://github.com/vitorsilvestre29/Juros-abusivos-IA" target="_blank" rel="noopener">Repositório →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMAÇÃO ============ -->
+  <section id="formacao" aria-labelledby="formacao-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-index">05</span>
+        <h2 id="formacao-titulo">Formação &amp; certificações</h2>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-block">
+          <h3>Formação acadêmica</h3>
+          <div class="edu-item">
+            <p class="edu-title">Pós-graduação em Engenharia de Dados e Inteligência Artificial</p>
+            <p class="edu-org">Universidade Anhanguera · 360h · online</p>
+            <p class="edu-period">ago 2026 — ago 2027</p>
+          </div>
+          <div class="edu-item">
+            <p class="edu-title">Bacharelado em Sistemas de Informação</p>
+            <p class="edu-org">UNIFEB</p>
+            <p class="edu-period">fev 2022 — dez 2025</p>
+          </div>
+        </div>
+
+        <div class="edu-block">
+          <h3>Certificações</h3>
+          <ul class="cert-list">
+            <li><span class="cert-name">Azure Databricks Data Engineer Associate (DP-750)</span><span class="cert-year">prova out 2026</span></li>
+            <li><span class="cert-name">dbt Fundamentals — dbt Labs</span><span class="cert-year">2026</span></li>
+            <li><span class="cert-name">AI Skills Fest — Microsoft</span><span class="cert-year">2026</span></li>
+            <li><span class="cert-name">SQL Avançado</span><span class="cert-year">2024–2025</span></li>
+            <li><span class="cert-name">Power BI Completo</span><span class="cert-year">2024</span></li>
+            <li><span class="cert-name">Engenharia de Dados com Python, SQL e NoSQL — Udemy</span><span class="cert-year">—</span></li>
+            <li><span class="cert-name">Lógica de Programação com Python</span><span class="cert-year">2024</span></li>
+            <li><span class="cert-name">Banco de Dados e Modelagem de Dados</span><span class="cert-year">2023</span></li>
+            <li><span class="cert-name">Inglês — Wizard</span><span class="cert-year">em desenvolvimento</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CONTATO ============ -->
+<section class="contact" id="contato" aria-labelledby="contato-titulo">
+  <div class="wrap">
+    <span class="section-kicker">06 — Contato</span>
+    <h2 id="contato-titulo">Vamos conversar sobre uma vaga de Engenharia de Dados.</h2>
+    <p class="contact-lede">
+      Respondo por e-mail ou LinkedIn geralmente no mesmo dia. Currículo em
+      PDF disponível para download.
+    </p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:vitorcesarsilvestre2017@gmail.com">
+        <span class="label">E-mail</span>
+        <span class="value">vitorcesarsilvestre2017@gmail.com</span>
+      </a>
+      <a class="contact-link" href="tel:+5517991476325">
+        <span class="label">Telefone</span>
+        <span class="value">+55 (17) 99147-6325</span>
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/vitor-silvestre21" target="_blank" rel="noopener">
+        <span class="label">LinkedIn</span>
+        <span class="value">/in/vitor-silvestre21</span>
+      </a>
+      <a class="contact-link" href="https://github.com/vitorsilvestre29" target="_blank" rel="noopener">
+        <span class="label">GitHub</span>
+        <span class="value">/vitorsilvestre29</span>
+      </a>
+      <a class="contact-link" href="assets/curriculo-vitor-silvestre.pdf" download>
+        <span class="label">Currículo</span>
+        <span class="value">Baixar PDF</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Vitor César dos Santos Silvestre</span>
+    <span>Olímpia/SP, Brasil</span>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
